@@ -5,6 +5,13 @@
  */
 
 require('./bootstrap');
+require('startbootstrap-sb-admin-2/vendor/jquery/jquery.min.js');
+require('startbootstrap-sb-admin-2/vendor/bootstrap/js/bootstrap.bundle.min.js');
+require('startbootstrap-sb-admin-2/vendor/jquery-easing/jquery.easing.min.js');
+require('startbootstrap-sb-admin-2/js/sb-admin-2.min.js');
+require('startbootstrap-sb-admin-2/vendor/chart.js/Chart.min.js');
+require('startbootstrap-sb-admin-2/vendor/datatables/jquery.dataTables.min.js');
+require('startbootstrap-sb-admin-2/vendor/datatables/dataTables.bootstrap4.min.js');
 
 window.Vue = require('vue');
 
