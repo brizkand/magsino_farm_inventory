@@ -86,17 +86,17 @@
               <div class="col-lg-6">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Welcome to {{ config('app.name', 'Laravel') }}</h1>
                   </div>
                   <form class="user" method="POST" action="{{ route('login') }}">   
-                     @csrf
+                    @csrf
                     <div class="form-group">
                       <input class="form-control form-control-user" placeholder="Enter Email Address..." id="email" type="email" 
                       class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" 
                       required autocomplete="email" autofocus>
                       @error('email')
-                        <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
+                        <span class="text-danger" role="alert">
+                          <strong>{{ $message }}</strong>
                         </span>
                      @enderror
                     </div>
@@ -104,22 +104,22 @@
                       <input class="form-control form-control-user" placeholder="Password" id="password" type="password" 
                       class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                       @error('password')
-                        <span class="invalid-feedback" role="alert">
-                              <strong>{{ $message }}</strong>
+                        <span class="text-danger" role="alert">
+                          <strong>{{ $message }}</strong>
                         </span>
                      @enderror
                     </div>
                     <div class="form-group">
-                     <div class="form-check">
+                      <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                         <label class="form-check-label" for="remember">
-                           {{ __('Remember Me') }}
+                          {{ __('Remember Me') }}
                         </label>
-                     </div>
-                     </div>
+                      </div>
+                    </div>
                     <button type="submit" class="btn btn-primary btn-user btn-block">
                       Login
-                     </button>
+                    </button>
                   </form>
                   <hr>
                   @if (Route::has('password.request'))
@@ -127,7 +127,6 @@
                         <a class="small" href="{{ route('password.request') }}">Forgot Password?</a>
                      </div>
                    @endif
-                  
                   <div class="text-center">
                     <a class="small" href="register.html">Create an Account!</a>
                   </div>
