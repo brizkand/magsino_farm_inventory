@@ -3,7 +3,7 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+   <link rel="shortcut icon" type='image/x-icon' href="{{ asset('images/chokdee_logo.jpg') }}">
    <!-- CSRF Token -->
    <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -73,6 +73,21 @@
          </div>
       </li>
 
+      
+      <!-- Nav Item - Animal Types Collapse Menu -->
+      <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAnimalTypes" aria-expanded="true" aria-controls="collapseAnimalTypes">
+            <i class="fas fa-fw fa-paw"></i>
+            <span>Animal Types</span>
+         </a>
+         <div id="collapseAnimalTypes" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+               <a class="collapse-item" href="utilities-color.html">All Animal Types</a>
+               <a class="collapse-item" href="utilities-border.html">Add New Animal Types</a>
+            </div>
+         </div>
+      </li>
+
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
@@ -83,6 +98,20 @@
             <div class="bg-white py-2 collapse-inner rounded">
                <a class="collapse-item" href="utilities-color.html">All Buildings</a>
                <a class="collapse-item" href="utilities-border.html">Add New Building</a>
+            </div>
+         </div>
+      </li>
+
+      <!-- Nav Item - Animal Gender Collapse Menu -->
+      <li class="nav-item">
+         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseGender" aria-expanded="true" aria-controls="collapseGender">
+            <i class="fas fa-fw fa-venus-mars"></i>
+            <span>Animal Genders</span>
+         </a>
+         <div id="collapseGender" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+               <a class="collapse-item" href="utilities-color.html">All Genders</a>
+               <a class="collapse-item" href="utilities-border.html">Add New Gender</a>
             </div>
          </div>
       </li>
@@ -114,7 +143,7 @@
                <li class="nav-item dropdown no-arrow">
                   <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                      <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
-                     <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                     <img class="img-profile rounded-circle" src="{{ asset('images/default_profile_image.png') }}">
                   </a>
                   <!-- Dropdown - User Information -->
                   <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
